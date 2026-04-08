@@ -173,19 +173,39 @@
           "featuresPerRow": 3,
           "moduleWidth": "30%",
           "featureWidth": "70%",
-          "align": "left"
+          "align": "left",
+          "showHeader": true,
+          "headerText": "Features del módulo"
         },
         "content": {
           "modules": [
             {
               "name": "STAFF",
               "features": [
-                "Gestión de personas",
-                "Carga documental",
-                "Validación documental",
-                "Control de vigencia",
-                "Habilitación operativa",
-                "Alertas y seguimiento"
+                {
+                  "title": "Gestión de personas",
+                  "description": "Alta, registro y control base de personas"
+                },
+                {
+                  "title": "Carga documental",
+                  "description": "Ingreso y asociación de documentos por persona"
+                },
+                {
+                  "title": "Validación documental",
+                  "description": "Revisión de vigencia, tipo y consistencia documental"
+                },
+                {
+                  "title": "Control de vigencia",
+                  "description": "Seguimiento de vencimientos y estado documental"
+                },
+                {
+                  "title": "Habilitación operativa",
+                  "description": "Determinación de aptitud para operar"
+                },
+                {
+                  "title": "Alertas y seguimiento",
+                  "description": "Detección de pendientes y control de observaciones"
+                }
               ]
             }
           ]

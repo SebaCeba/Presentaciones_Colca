@@ -11,12 +11,13 @@ import '../base/SlideBase.css';
  * @param {Object} props.layout - Configuración de layout
  * @param {number} props.layout.featuresPerRow - Features por fila
  * @param {string} props.layout.moduleWidth - Ancho del área del módulo (%)
- * @param {string} props.layout.featureWidth - Ancho del área de features (%)
+ * @param {boolean} [props.layout.showHeader] - Mostrar header en panel derecho
+ * @param {string} [props.layout.headerText] - Texto del header
  * @param {Object} props.content - Contenido del catálogo
  * @param {Array} props.content.modules - Array de módulos con features
  */
 const ModuleCatalogSlide = ({ title, subtitle, layout, content }) => {
-  const { featuresPerRow = 3, moduleWidth = '30%' } = layout;
+  const { featuresPerRow = 3, moduleWidth = '30%', showHeader = false, headerText = '' } = layout;
   const module = content.modules[0];
 
   return (
@@ -61,29 +62,82 @@ const ModuleCatalogSlide = ({ title, subtitle, layout, content }) => {
           </h2>
         </div>
 
-        {/* Panel derecho: features en grid limpio */}
+        {/* Panel derecho: header + features en grid */}
         <div style={{
           flex: 1,
-          display: 'grid',
-          gridTemplateColumns: `repeat(${featuresPerRow}, 1fr)`,
-          gap: '2.5rem 3.5rem',
-          alignContent: 'start',
-          paddingTop: '1.5rem',
-          paddingRight: '1rem'
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '2rem'
         }}>
-          {module.features.map((feature, index) => (
-            <div key={index}>
-              <p style={{
-                fontSize: '1.125rem',
+          {showHeader && headerText && (
+            <div style={{
+              paddingBottom: '1rem',
+              borderBottom: '2px solid #027B76'
+            }}>
+              <h3 style={{
+                fontSize: '1.5rem',
                 fontWeight: 600,
-                color: '#1a1a1a',
-                lineHeight: 1.5,
-                margin: 0
+                color: '#002E46',
+                margin: 0,
+                lineHeight: 1.3
               }}>
-                {feature}
-              </p>
+                {headerText}
+              </h3>
             </div>
-          ))}
+          )}
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: `repeat(${featuresPerRow}, 1fr)`,
+            gap: '2rem 2.5rem',
+            alignContent: 'start'
+          }}>
+            {module.features.map((feature, index) => {
+              const isString = typeof feature === 'string';
+              const featureTitle = isString ? feature : feature.title;
+              const featureDescription = isString ? '' : feature.description;
+
+              return (
+                <div key={index} style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0.5rem'
+                }}>
+                  <div style={{
+                    backgroundColor: '#E6D6A7',
+                    padding: '0.75rem 1rem',
+                    borderLeft: '3px solid #027B76'
+                  }}>
+                    <p style={{
+                      fontSize: '1rem',
+                      fontWeight: 600,
+                      color: '#1a1a1a',
+                      lineHeight: 1.3,
+                      margin: 0
+                    }}>
+                      {featureTitle}
+                    </p>
+                  </div>
+                  {featureDescription && (
+                    <div style={{
+                      padding: '0.75rem 1rem',
+                      backgroundColor: '#ffffff'
+                    }}>
+                      <p style={{
+                        fontSize: '0.875rem',
+                        fontWeight: 400,
+                        color: '#4a4a4a',
+                        lineHeight: 1.5,
+                        margin: 0
+                      }}>
+                        {featureDescription}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </SlideBase>
