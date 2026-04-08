@@ -1,0 +1,26 @@
+.slide-section {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.section-bullets {
+  list-style-type: disc;
+  padding-left: 3rem;
+  margin: 0;
+}
+
+.section-bullets li {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  padding-left: 0.8rem;
+}

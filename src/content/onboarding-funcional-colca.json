@@ -1,0 +1,178 @@
+{
+  "presentation": {
+    "id": "onboarding-funcional-colca",
+    "title": "Onboarding Funcional COLCA",
+    "slides": [
+      {
+        "type": "hero",
+        "title": "Onboarding Funcional COLCA",
+        "bullets": [
+          "Cómo bajamos COLCA a producto",
+          "Cómo vamos a trabajar como equipo",
+          "Qué revisaremos hoy: STAFF"
+        ],
+        "emphasis": "Esta sesión define cómo se construye el sistema"
+      },
+      {
+        "type": "agenda",
+        "title": "QUÉ REVISAMOS HOY",
+        "items": [
+          {
+            "number": "01",
+            "title": "START",
+            "description": "Base de activación, acceso inicial y configuración."
+          },
+          {
+            "number": "02",
+            "title": "CLIENT",
+            "description": "Estructura de vínculo, contexto operativo y reglas del mandante."
+          },
+          {
+            "number": "03",
+            "title": "STAFF",
+            "description": "Operación sobre personas, documentos y habilitación."
+          }
+        ]
+      },
+      {
+        "type": "framework",
+        "title": "CÓMO CONSTRUIMOS COLCA",
+        "steps": [
+          {
+            "name": "Journey Maps",
+            "description": "Definen problema y resultado esperado"
+          },
+          {
+            "name": "Flujos / Procesos",
+            "description": "Describen cómo opera el negocio"
+          },
+          {
+            "name": "Historias de Usuario",
+            "description": "Definen capacidades implementables"
+          },
+          {
+            "name": "Arquitectura y Reglas",
+            "description": "Aterrizan restricciones y estructura"
+          },
+          {
+            "name": "Testing y QA",
+            "description": "Validan lo construido"
+          }
+        ],
+        "emphasis": "Si algo no está en este framework, no existe en el sistema"
+      },
+      {
+        "type": "systemStructure"
+      },
+      {
+        "type": "text",
+        "title": "Definición del módulo STAFF",
+        "paragraphs": [
+          "El módulo STAFF en COLCA es el módulo que gestiona a las personas (trabajadores/colaboradores) como entidades operativas dentro del CCO, y convierte su documentación en un sistema controlado, trazable y reutilizable para cumplir exigencias de mandantes, contratos y reglas internas.",
+          "En términos simples, STAFF asegura que cada persona esté habilitable para operar: que exista, esté vigente (alta/baja), tenga sus documentos correctos, validados y asociados al contexto donde trabaja."
+        ]
+      },
+      {
+        "type": "diagram",
+        "title": "¿En qué consiste STAFF?",
+        "subtitle": "Seis capacidades fundamentales que estructuran el módulo",
+        "columns": [
+          {
+            "title": "1. Registro y vigencia de personas",
+            "content": "El sistema permite registrar personas y mantener su estado de vigencia en el tiempo. Esto implica no solo almacenar información básica, sino también entender si una persona está habilitada o no para operar según su situación documental actual."
+          },
+          {
+            "title": "2. Identidad documental (IDD)",
+            "content": "Cada persona construye una identidad documental única (IDD), que centraliza todos sus documentos relevantes. Esta identidad actúa como fuente de verdad, evitando duplicaciones y permitiendo evaluar el cumplimiento de manera consistente."
+          },
+          {
+            "title": "3. Gestión de documentación",
+            "content": "El sistema permite gestionar todos los documentos asociados a una persona, incluyendo su carga, visualización y actualización. Esto asegura trazabilidad y control sobre la información documental en todo momento."
+          },
+          {
+            "title": "4. Validación y estados",
+            "content": "Los documentos son evaluados y se les asigna un estado (por ejemplo: vigente, vencido, observado o rechazado). Este proceso permite traducir documentos individuales en señales claras de cumplimiento."
+          },
+          {
+            "title": "5. Asociación al contexto operativo",
+            "content": "Una persona no existe en abstracto: se asocia a un contexto operativo específico (contrato, faena, mandante). Esto permite evaluar su cumplimiento en función de dónde está operando realmente."
+          },
+          {
+            "title": "6. Reutilización sin duplicidad",
+            "content": "La documentación cargada puede reutilizarse en distintos contextos sin necesidad de volver a subirla. Esto reduce fricción operativa y evita inconsistencias en la información."
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "title": "Resultado del módulo STAFF",
+        "paragraphs": [
+          "Que el CCO pase de una gestión humana/documental manual y frágil a un flujo donde el cumplimiento es continuo, auditable y anticipativo: menos retrabajo, menos riesgo de sanciones/detenciones y más velocidad operativa."
+        ]
+      },
+      {
+        "type": "text",
+        "title": "Usuario principal",
+        "paragraphs": [
+          "El usuario principal de STAFF es cualquier persona del CCO que cumpla el rol de responsable de la gestión documental de personas, o que lidere al equipo encargado de esa gestión, independiente del cargo formal.",
+          "En la práctica, suele ser alguien con atribuciones para mantener la nómina vigente (altas/bajas), coordinar la carga/actualización documental y asegurar que el personal esté 'habilitable' para operar en contratos/faenas/mandantes.",
+          "Ejemplos típicos incluyen jefatura de RRHH, encargatura/supervisión de acreditación, jefatura de administración o jefaturas operativas habilitadas por la estructura del CCO."
+        ]
+      },
+      {
+        "type": "bullets",
+        "title": "FP01 — Gestión base de personas",
+        "bullets": [
+          "ID 1 — Ver listado de personas",
+          "ID 2 — Abrir detalle de persona",
+          "ID 3 — Agregar persona individual",
+          "ID 4 — Editar información base de persona"
+        ]
+      },
+      {
+        "type": "bullets",
+        "title": "Carga masiva de personas",
+        "bullets": [
+          "ID 5 — Carga masiva de personas",
+          "ID 6 — Previsualizar importación masiva",
+          "ID 7 — Resolver duplicados en carga masiva",
+          "ID 8 — Confirmar o cancelar carga masiva"
+        ]
+      },
+      {
+        "type": "bullets",
+        "title": "Gestión operativa",
+        "bullets": [
+          "ID 9 — Ver ficha de persona",
+          "ID 10 — Editar información base desde formulario",
+          "ID 11 — Filtrar listado de personas",
+          "ID 12 — Visualizar personas deshabilitadas"
+        ]
+      },
+      {
+        "type": "bullets",
+        "title": "Acciones rápidas",
+        "bullets": [
+          "ID 13 — Cambio rápido de estado desde la tabla",
+          "ID 14 — Acciones secundarias por registro"
+        ]
+      },
+      {
+        "type": "bullets",
+        "title": "Acciones secundarias",
+        "bullets": [
+          "Deshabilitar",
+          "Eliminar"
+        ]
+      },
+      {
+        "type": "bullets",
+        "title": "Cierre",
+        "bullets": [
+          "Journey → Proceso → Historia de Usuario → Código"
+        ],
+        "emphasis": "No programamos features, programamos decisiones de negocio"
+      }
+    ]
+  }
+}
