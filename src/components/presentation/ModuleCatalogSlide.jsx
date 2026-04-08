@@ -24,7 +24,7 @@ const ModuleCatalogSlide = ({ title, subtitle, layout, content }) => {
       {subtitle && (
         <p style={{
           fontSize: '1.125rem',
-          marginBottom: '2.5rem',
+          marginBottom: '3rem',
           lineHeight: 1.5,
           color: '#757575',
           fontWeight: 400
@@ -35,7 +35,7 @@ const ModuleCatalogSlide = ({ title, subtitle, layout, content }) => {
 
       <div style={{
         display: 'flex',
-        gap: '3rem',
+        gap: '4rem',
         height: 'calc(100% - 4rem)',
         alignItems: 'stretch'
       }}>
@@ -45,15 +45,17 @@ const ModuleCatalogSlide = ({ title, subtitle, layout, content }) => {
           backgroundColor: '#027B76',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center'
+          justifyContent: 'center',
+          padding: '3rem 2rem'
         }}>
           <h2 style={{
-            fontSize: '3rem',
+            fontSize: '3.5rem',
             fontWeight: 700,
             color: '#ffffff',
-            lineHeight: 1.1,
+            lineHeight: 1,
             margin: 0,
-            textAlign: 'center'
+            textAlign: 'center',
+            letterSpacing: '0.02em'
           }}>
             {module.name}
           </h2>
@@ -64,9 +66,10 @@ const ModuleCatalogSlide = ({ title, subtitle, layout, content }) => {
           flex: 1,
           display: 'grid',
           gridTemplateColumns: `repeat(${featuresPerRow}, 1fr)`,
-          gap: '2rem 2.5rem',
+          gap: '2.5rem 3.5rem',
           alignContent: 'start',
-          paddingTop: '1rem'
+          paddingTop: '1.5rem',
+          paddingRight: '1rem'
         }}>
           {module.features.map((feature, index) => (
             <div key={index}>
@@ -74,7 +77,7 @@ const ModuleCatalogSlide = ({ title, subtitle, layout, content }) => {
                 fontSize: '1.125rem',
                 fontWeight: 600,
                 color: '#1a1a1a',
-                lineHeight: 1.4,
+                lineHeight: 1.5,
                 margin: 0
               }}>
                 {feature}
