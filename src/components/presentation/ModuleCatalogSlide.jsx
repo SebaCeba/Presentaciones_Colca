@@ -16,17 +16,17 @@ import '../base/SlideBase.css';
  * @param {Array} props.content.modules - Array de módulos con features
  */
 const ModuleCatalogSlide = ({ title, subtitle, layout, content }) => {
-  const { featuresPerRow = 3, moduleWidth = '30%', featureWidth = '70%' } = layout;
+  const { featuresPerRow = 3, moduleWidth = '30%' } = layout;
   const module = content.modules[0];
 
   return (
     <SlideBase title={title}>
       {subtitle && (
         <p style={{
-          fontSize: '1.25rem',
-          marginBottom: '3rem',
+          fontSize: '1.125rem',
+          marginBottom: '2.5rem',
           lineHeight: 1.5,
-          color: '#4a4a4a',
+          color: '#757575',
           fontWeight: 400
         }}>
           {subtitle}
@@ -36,50 +36,43 @@ const ModuleCatalogSlide = ({ title, subtitle, layout, content }) => {
       <div style={{
         display: 'flex',
         gap: '3rem',
-        height: 'calc(100% - 5rem)',
-        alignItems: 'flex-start'
+        height: 'calc(100% - 4rem)',
+        alignItems: 'stretch'
       }}>
-        {/* Lado izquierdo: nombre del módulo */}
+        {/* Panel izquierdo: bloque sólido con nombre del módulo */}
         <div style={{
           flex: `0 0 ${moduleWidth}`,
+          backgroundColor: '#027B76',
           display: 'flex',
-          alignItems: 'flex-start',
-          justifyContent: 'flex-start'
+          alignItems: 'center',
+          justifyContent: 'center'
         }}>
           <h2 style={{
-            fontSize: '2.5rem',
-            fontWeight: 600,
-            color: '#002E46',
-            lineHeight: 1.2,
-            margin: 0
+            fontSize: '3rem',
+            fontWeight: 700,
+            color: '#ffffff',
+            lineHeight: 1.1,
+            margin: 0,
+            textAlign: 'center'
           }}>
             {module.name}
           </h2>
         </div>
 
-        {/* Lado derecho: features en grid */}
+        {/* Panel derecho: features en grid limpio */}
         <div style={{
           flex: 1,
           display: 'grid',
           gridTemplateColumns: `repeat(${featuresPerRow}, 1fr)`,
-          gap: '1.5rem',
-          alignContent: 'start'
+          gap: '2rem 2.5rem',
+          alignContent: 'start',
+          paddingTop: '1rem'
         }}>
           {module.features.map((feature, index) => (
-            <div
-              key={index}
-              style={{
-                backgroundColor: '#E6D6A7',
-                padding: '1.5rem',
-                borderLeft: '4px solid #027B76',
-                display: 'flex',
-                alignItems: 'center',
-                minHeight: '80px'
-              }}
-            >
+            <div key={index}>
               <p style={{
                 fontSize: '1.125rem',
-                fontWeight: 500,
+                fontWeight: 600,
                 color: '#1a1a1a',
                 lineHeight: 1.4,
                 margin: 0
