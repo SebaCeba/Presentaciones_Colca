@@ -6,6 +6,7 @@ import ExpandedBulletsSlide from './ExpandedBulletsSlide';
 import DiagramSlide from './DiagramSlide';
 import AgendaSlide from './AgendaSlide';
 import FrameworkSlide from './FrameworkSlide';
+import ModuleCatalogSlide from './ModuleCatalogSlide';
 
 /**
  * PresentationRenderer - Renderiza una presentación desde JSON
@@ -52,6 +53,17 @@ const PresentationRenderer = ({ data, currentSlide = 0 }) => {
         title={slide.title}
         subtitle={slide.subtitle}
         columns={slide.columns}
+      />
+    );
+  }
+
+  if (slide.type === 'module-catalog') {
+    return (
+      <ModuleCatalogSlide
+        title={slide.title}
+        subtitle={slide.subtitle}
+        layout={slide.layout}
+        content={slide.content}
       />
     );
   }

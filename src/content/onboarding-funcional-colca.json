@@ -166,6 +166,32 @@
         ]
       },
       {
+        "type": "module-catalog",
+        "title": "STAFF",
+        "subtitle": "Control documental y habilitación operativa de personas",
+        "layout": {
+          "featuresPerRow": 3,
+          "moduleWidth": "30%",
+          "featureWidth": "70%",
+          "align": "left"
+        },
+        "content": {
+          "modules": [
+            {
+              "name": "STAFF",
+              "features": [
+                "Gestión de personas",
+                "Carga documental",
+                "Validación documental",
+                "Control de vigencia",
+                "Habilitación operativa",
+                "Alertas y seguimiento"
+              ]
+            }
+          ]
+        }
+      },
+      {
         "type": "bullets",
         "title": "Cierre",
         "bullets": [
